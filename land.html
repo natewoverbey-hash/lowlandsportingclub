@@ -906,7 +906,7 @@ footer {
       </div>
 
       <div class="reveal">
-        <div style="aspect-ratio:3/4;overflow:hidden;border-radius:2px"><img src="aerial_View_Property.png" alt="Aerial architectural rendering of Lowland Sporting Club property" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+        <div class="img-placeholder" style="aspect-ratio:3/4;background:linear-gradient(180deg,#2d4a3a,#3d5e45,#6b7f4a,#c4a54a)"><span class="caption">Morning light through the canopy</span></div>
       </div>
     </div>
   </div>
@@ -1031,4 +1031,13 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
 // FAQ toggles
 document.querySelectorAll('.faq-item').forEach(item => {
-  item.addEventLis
+  item.addEventListener('click', () => {
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!wasOpen) item.classList.add('open');
+  });
+});
+
+</script>
+</body>
+</html>
