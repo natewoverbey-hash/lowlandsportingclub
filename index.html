@@ -367,7 +367,15 @@ nav .nav-links a.active { opacity: 1; border-bottom: 1px solid var(--brass); }
   font-family: 'Lato', sans-serif;
   font-size: 0.6rem; letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: rgba(245,240,230,0.45);
+  color: rgba(245,240,230,0.65);
+  z-index: 2;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+}
+.img-placeholder img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .img-frame { position: relative; }
 .img-frame::before {
@@ -898,7 +906,8 @@ footer {
   <div class="container">
     <div class="grid-2">
       <div class="img-frame reveal">
-        <div class="img-placeholder" style="aspect-ratio:4/5;background:linear-gradient(135deg,#2d4a3a,#3d5e45,#4a6b48,#6b7f4a)">
+        <div class="img-placeholder" style="aspect-ratio:3/2">
+          <img src="lowland-sporting-club-lowcountry-morning.png" alt="Morning light through live oaks draped with Spanish moss over a Lowcountry field, with a clay target thrower in the foreground" loading="lazy">
           <span class="caption">Lowcountry morning</span>
         </div>
       </div>
